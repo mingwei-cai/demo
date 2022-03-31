@@ -1,0 +1,42 @@
+*, *::before, *::after {
+	position: relative;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: max(1vw, 12px);
+	background-color: #FFF;
+}
+
+body {
+	padding: 0.5rem;
+}
+
+.keyboard-div {
+	display: inline-flex;
+	flex-direction: column;
+	padding: 0.1em;
+}
+
+.keyboard-div>* {
+	display: flex;
+	flex-direction: row;
+}
+
+.key-div {
+	display: inline-block;
+	width: 2.3em;
+	height: 2.3em;
+	margin: 0.1em;
+	border: solid max(0.05em, 1px) #000;
+	border-radius: 0.3em;
+	background-color: #FFF;
+}
+
+.key-div[data-press="true"] {
+	background-color: #F9C;
+}
+
+.keyboard-div {
+	font-size: 200%;
+}
