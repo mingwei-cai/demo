@@ -49,6 +49,7 @@ body {
 	border-width: 6px;
 	border-color: #FFF9 #0003 #0009 #FFF3;
 	background-color: #333;
+	box-shadow: #FFF3 0 0 17px 12px;
 	padding: 20px;
 	flex-flow: row nowrap;
 	align-items: stretch;
