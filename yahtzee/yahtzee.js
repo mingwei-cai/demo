@@ -80,18 +80,13 @@ let checkAwardArray = [
 	},
 	(countArray) => {
 		let score = 0;
-		let ok2 = false;
-		let ok3 = false;
 		for (let point = 1; point <= nPoint; point += 1) {
 			score += countArray[point] * point;
-			if (countArray[point] == 2) {
-				ok2 = true;
-			};
-			if (countArray[point] == 3) {
-				ok3 = true;
+			if (countArray[point] == 1 || countArray[point] == 4) {
+				return 0;
 			};
 		};
-		return ok2 && ok3 ? score : 0;
+		return score;
 	},
 	(countArray) => {
 		for (let endPoint = 4; endPoint <= nPoint; endPoint += 1) {
