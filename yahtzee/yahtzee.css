@@ -1,0 +1,186 @@
+* {
+	position: relative;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	background-position-y: -10000px;
+	background-size:
+		auto 59px,
+		auto 53px,
+		auto 47px,
+		auto 41px,
+		auto 35px,
+		auto 29px,
+		auto 23px,
+		auto 17px,
+		auto 11px;
+	background-image:
+		linear-gradient(#E0C0A0, #E0C0A0 6px, transparent 6px),
+		linear-gradient(#E1C1A1, #E1C1A1 6px, transparent 6px),
+		linear-gradient(#E2C2A2, #E2C2A2 6px, transparent 6px),
+		linear-gradient(#E3C3A3, #E3C3A3 6px, transparent 6px),
+		linear-gradient(#E4C4A4, #E4C4A4 6px, transparent 6px),
+		linear-gradient(#E5C5A5, #E5C5A5 6px, transparent 6px),
+		linear-gradient(#E6C6A6, #E6C6A6 6px, transparent 6px),
+		linear-gradient(#E7C7A7, #E7C7A7 6px, transparent 6px),
+		linear-gradient(#E8C8A8, #E8C8A8 6px, transparent 6px);
+	background-color: #E9C9A9;
+	font-family: Consolas, Menlo, Monaco, 'Microsoft JhengHei', sans-serif;
+	font-size: 16px;
+}
+
+body {
+	display: inline-flex;
+	vertical-align: top;
+	margin: 0;
+	min-width: 100%;
+	min-height: 100%;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.game {
+	display: inline-flex;
+	flex: 0 0 auto;
+	border-style: solid;
+	border-width: 6px;
+	border-color: #FFF9 #0003 #0009 #FFF3;
+	background-color: #333;
+	padding: 20px;
+	flex-flow: row nowrap;
+	align-items: stretch;
+	gap: 20px;
+}
+
+.left {
+	display: inline-flex;
+	flex: 0 0 auto;
+	flex-flow: column nowrap;
+	align-items: stretch;
+	gap: 20px;
+}
+
+.message {
+	display: inline-block;
+	flex: 1 0 0;
+	border-style: solid;
+	border-width: 6px;
+	border-color: #0009 #FFF3 #FFF9 #0003;
+	background-clip: padding-box;
+	background-color: #FFF;
+	overflow-x: auto;
+	overflow-y: scroll;
+}
+
+.dice-area {
+	display: inline-flex;
+	flex: 0 0 auto;
+	border-style: solid;
+	border-width: 6px;
+	border-color: #0009 #FFF3 #FFF9 #0003;
+	background-clip: padding-box;
+	padding: 20px;
+	background-size: 200px 200px;
+	background-image: repeating-conic-gradient(at 100.1px 100.3px, #600, #B00 0.001deg, #600 0.002deg);
+	flex-flow: row nowrap;
+	gap: 20px;
+}
+
+.dice {
+	display: inline-block;
+	flex: 0 0 auto;
+	width: 48px;
+	height: 48px;
+	background-image: url('dice.png');
+}
+
+.game[data-enabled='1'] .dice {
+	cursor: pointer;
+}
+
+.dice[data-keep='1'] {
+	outline: solid 3px #6F0;
+}
+
+.dice[data-point='1'] {
+	background-position-x: -100%;
+}
+
+.dice[data-point='2'] {
+	background-position-x: -200%;
+}
+
+.dice[data-point='3'] {
+	background-position-x: -300%;
+}
+
+.dice[data-point='4'] {
+	background-position-x: -400%;
+}
+
+.dice[data-point='5'] {
+	background-position-x: -500%;
+}
+
+.dice[data-point='6'] {
+	background-position-x: -600%;
+}
+
+.right {
+	display: inline-flex;
+	flex: 0 0 auto;
+	flex-flow: column nowrap;
+	align-items: stretch;
+	gap: 20px;
+}
+
+.score-table {
+	flex: 0 0 auto;
+	width: 10em;
+	border-spacing: 2;
+	background-color: #000;
+	table-layout: fixed;
+}
+
+.score-table th {
+	background-color: #FF6;
+}
+
+.score-table td {
+	background-color: #FFF;
+	text-align: center;
+}
+
+.award-score[data-state='1'] {
+	color: #F9C;
+	font-size: small;
+}
+
+.game[data-enabled='1'] .award-score[data-state='1'] {
+	cursor: pointer;
+}
+
+.score-table .highlight th,
+.score-table .highlight td {
+	background-color: #36C;
+	color: #FFF;
+}
+
+.button-area {
+	display: inline-flex;
+	flex: 1 0 0;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: stretch;
+}
+
+.button-area>button {
+	flex: 0 0 auto;
+	padding: 6px;
+	font-family: inherit;
+	font-size: inherit;
+	cursor: pointer;
+}
