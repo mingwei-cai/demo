@@ -280,7 +280,7 @@ let updateGameDiv = () => {
 	let score = game.bonus < nBonus ? 0 : 35;
 	/** @type {HTMLDivElement} */
 	let bonusScoreDiv = document.querySelector('.bonus-score');
-	if ((game.state & (1 << nPoint) - 1) > 0) {
+	if (score == 0 && (game.state & (1 << nPoint) - 1) > 0) {
 		bonusScoreDiv.innerHTML = '';
 	} else {
 		bonusScoreDiv.textContent = score;
