@@ -17,16 +17,16 @@ html {
 		auto 17px,
 		auto 11px;
 	background-image:
-		linear-gradient(#D0A070, #D0A070 6px, #0000 6px),
-		linear-gradient(#D2A272, #D2A272 6px, #0000 6px),
-		linear-gradient(#D4A474, #D4A474 6px, #0000 6px),
-		linear-gradient(#D6A676, #D6A676 6px, #0000 6px),
-		linear-gradient(#D8A878, #D8A878 6px, #0000 6px),
-		linear-gradient(#DAAA7A, #DAAA7A 6px, #0000 6px),
-		linear-gradient(#DCAC7C, #DCAC7C 6px, #0000 6px),
-		linear-gradient(#DEAE7E, #DEAE7E 6px, #0000 6px),
-		linear-gradient(#E0B080, #E0B080 6px, #0000 6px);
-	background-color: #E2B282;
+		linear-gradient(#D0A068, #D0A068 6px, #0000 6px),
+		linear-gradient(#D2A26A, #D2A26A 6px, #0000 6px),
+		linear-gradient(#D4A46C, #D4A46C 6px, #0000 6px),
+		linear-gradient(#D6A66E, #D6A66E 6px, #0000 6px),
+		linear-gradient(#D8A870, #D8A870 6px, #0000 6px),
+		linear-gradient(#DAAA72, #DAAA72 6px, #0000 6px),
+		linear-gradient(#DCAC74, #DCAC74 6px, #0000 6px),
+		linear-gradient(#DEAE76, #DEAE76 6px, #0000 6px),
+		linear-gradient(#E0B078, #E0B078 6px, #0000 6px);
+	background-color: #E2B27A;
 	font-family: Consolas, Menlo, Monaco, 'Microsoft JhengHei', sans-serif;
 	font-size: 16px;
 }
