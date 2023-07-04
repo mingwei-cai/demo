@@ -17,16 +17,16 @@ html {
 		auto 17px,
 		auto 11px;
 	background-image:
-		linear-gradient(#E0C0A0, #E0C0A0 6px, transparent 6px),
-		linear-gradient(#E1C1A1, #E1C1A1 6px, transparent 6px),
-		linear-gradient(#E2C2A2, #E2C2A2 6px, transparent 6px),
-		linear-gradient(#E3C3A3, #E3C3A3 6px, transparent 6px),
-		linear-gradient(#E4C4A4, #E4C4A4 6px, transparent 6px),
-		linear-gradient(#E5C5A5, #E5C5A5 6px, transparent 6px),
-		linear-gradient(#E6C6A6, #E6C6A6 6px, transparent 6px),
-		linear-gradient(#E7C7A7, #E7C7A7 6px, transparent 6px),
-		linear-gradient(#E8C8A8, #E8C8A8 6px, transparent 6px);
-	background-color: #E9C9A9;
+		linear-gradient(#D0A070, #D0A070 6px, #0000 6px),
+		linear-gradient(#D2A272, #D2A272 6px, #0000 6px),
+		linear-gradient(#D4A474, #D4A474 6px, #0000 6px),
+		linear-gradient(#D6A676, #D6A676 6px, #0000 6px),
+		linear-gradient(#D8A878, #D8A878 6px, #0000 6px),
+		linear-gradient(#DAAA7A, #DAAA7A 6px, #0000 6px),
+		linear-gradient(#DCAC7C, #DCAC7C 6px, #0000 6px),
+		linear-gradient(#DEAE7E, #DEAE7E 6px, #0000 6px),
+		linear-gradient(#E0B080, #E0B080 6px, #0000 6px);
+	background-color: #E2B282;
 	font-family: Consolas, Menlo, Monaco, 'Microsoft JhengHei', sans-serif;
 	font-size: 16px;
 }
