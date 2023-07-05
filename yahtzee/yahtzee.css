@@ -17,16 +17,16 @@ html {
 		auto 17px,
 		auto 11px;
 	background-image:
+		linear-gradient(#D8A870, #D8A870 6px, #0000 6px),
+		linear-gradient(#DAAA72, #DAAA72 6px, #0000 6px),
+		linear-gradient(#DCAC74, #DCAC74 6px, #0000 6px),
+		linear-gradient(#DEAE76, #DEAE76 6px, #0000 6px),
 		linear-gradient(#E0B078, #E0B078 6px, #0000 6px),
 		linear-gradient(#E2B27A, #E2B27A 6px, #0000 6px),
 		linear-gradient(#E4B47C, #E4B47C 6px, #0000 6px),
 		linear-gradient(#E6B67E, #E6B67E 6px, #0000 6px),
-		linear-gradient(#E8B880, #E8B880 6px, #0000 6px),
-		linear-gradient(#EABA82, #EABA82 6px, #0000 6px),
-		linear-gradient(#ECBC84, #ECBC84 6px, #0000 6px),
-		linear-gradient(#EEBE86, #EEBE86 6px, #0000 6px),
-		linear-gradient(#F0C088, #F0C088 6px, #0000 6px);
-	background-color: #D8A870;
+		linear-gradient(#E8B880, #E8B880 6px, #0000 6px);
+	background-color: #D0A068;
 	font-family: Consolas, Menlo, Monaco, 'Microsoft JhengHei', sans-serif;
 	font-size: 16px;
 }
