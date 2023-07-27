@@ -141,7 +141,7 @@ body {
 .score-table {
 	flex: 0 0 auto;
 	width: 10em;
-	border-spacing: 2;
+	border-spacing: 2px;
 	background-color: #000;
 	table-layout: fixed;
 }
