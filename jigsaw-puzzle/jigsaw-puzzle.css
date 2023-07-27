@@ -1,0 +1,107 @@
+::before,
+::after,
+* {
+	position: relative;
+	box-sizing: border-box;
+	flex: 0 0 auto;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	background-color: #666;
+	font-family: Consolas, Menlo, 'Microsoft JhengHei', sans-serif;
+}
+
+body {
+	display: inline-flex;
+	flex-flow: column nowrap;
+	margin: 0;
+	min-width: 100%;
+	min-height: 100%;
+	vertical-align: top;
+	justify-content: center;
+	align-items: center;
+}
+
+canvas {
+	background-color: #CCC;
+	image-rendering: pixelated;
+}
+
+input {
+	width: 6em;
+	font-family: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+button:disabled {
+	pointer-events: none;
+}
+
+.game {
+	display: inline-flex;
+	flex-flow: row nowrap;
+	padding: 10px 20px 20px 20px;
+	gap: 20px;
+	background-color: #DEC;
+	justify-items: stretch;
+}
+
+.column {
+	display: inline-flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+
+.text {
+	white-space: nowrap;
+}
+
+.button-area {
+	display: inline-flex;
+	flex-flow: row nowrap;
+}
+
+.shape-area {
+	display: inline-flex;
+	flex-flow: column nowrap;
+	flex: 1 0 0;
+	border: solid 1px #000;
+	width: 290px;
+	background-color: #FFF;
+	overflow-y: scroll;
+}
+
+.shape-area::before,
+.shape-area::after {
+	content: '';
+	height: 4px;
+}
+
+.shape {
+	display: inline-flex;
+	flex-flow: row nowrap;
+	margin: 0 4px;
+	padding: 4px;
+	gap: 4px;
+	align-items: center;
+	cursor: pointer;
+}
+
+.shape.selected {
+	cursor: auto;
+	background-color: #DEF;
+}
+
+.shape>canvas {
+	pointer-events: none;
+}
+
+.info {
+	flex: 1 0 0;
+	text-align: center;
+}
