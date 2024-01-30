@@ -39,7 +39,7 @@ let keyboardLayout = [
 ];
 
 let tonalityArray = [];
-for (let tone = 7; tone >= -7; tone -= 1) {
+for (let tone = 84; tone >= -84; tone -= 1) {
 	tonalityArray.push((tone > 0 ? '+' : '') + tone);
 };
 
@@ -51,7 +51,7 @@ makeNode(document.body,
 		)],
 	],
 	['<div>',
-		'Press "space" to ',
+		'Press "ctrl" to ',
 		['<select class="accidental-select">',
 			['<option value="+7">', 'Sharp'],
 			['<option value="-7">', 'Flat'],
@@ -89,7 +89,6 @@ for (let i = 0; i < keyboardLayout.length; i += 1) {
 	};
 };
 
-let isAccidental = false;
 let audioContext = new AudioContext();
 let gainNode = audioContext.createGain();
 gainNode.connect(audioContext.destination);
@@ -97,11 +96,10 @@ gainNode.gain.value = 0.25;
 
 document.addEventListener('keydown', function (ev) {
 	let code = ev.code;
-	if (code == 'Space') {
-		isAccidental = true;
-	} else if (code in toneByCode && oscillatorNodeByCode[code] == null) {
+	if (code in toneByCode && oscillatorNodeByCode[code] == null) {
 		let tone = toneByCode[code] + +tonalitySelect.value;
-		if (isAccidental) {
+		if (ev.ctrlKey || ev.metaKey) {
+			ev.preventDefault();
 			tone += +accidentalSelect.value;
 		};
 		let pitch = Math.round(tone / 7);
@@ -121,9 +119,7 @@ document.addEventListener('keydown', function (ev) {
 document.addEventListener('keyup', function (ev) {
 	let code = ev.code;
 	let oscillatorNode = oscillatorNodeByCode[code];
-	if (code == 'Space') {
-		isAccidental = false;
-	} else if (oscillatorNode != null) {
+	if (oscillatorNode != null) {
 		oscillatorNodeByCode[code] = null;
 		oscillatorNode.stop();
 		/** @type {HTMLDivElement} */
