@@ -51,7 +51,7 @@ makeNode(document.body,
 		)],
 	],
 	['<div>',
-		'Press "ctrl" to ',
+		'Press "shift" to ',
 		['<select class="accidental-select">',
 			['<option value="+7">', 'Sharp'],
 			['<option value="-7">', 'Flat'],
@@ -98,7 +98,7 @@ document.addEventListener('keydown', function (ev) {
 	let code = ev.code;
 	if (code in toneByCode && oscillatorNodeByCode[code] == null) {
 		let tone = toneByCode[code] + +tonalitySelect.value;
-		if (ev.ctrlKey || ev.metaKey) {
+		if (ev.shiftKey) {
 			ev.preventDefault();
 			tone += +accidentalSelect.value;
 		};
