@@ -46,9 +46,7 @@ for (let tone = 84; tone >= -84; tone -= 1) {
 makeNode(document.body,
 	['<div>',
 		'Tonality: ',
-		['<select class="tonality-select">', ...tonalityArray.map((tone) =>
-			['<option value="' + tone + '">', tone],
-		)],
+		['<input type="number" class="tonality-input" min="-84" max="84">'],
 	],
 	['<div>',
 		'Press "shift" to ',
@@ -65,8 +63,8 @@ makeNode(document.body,
 );
 
 /** @type {HTMLSelectElement} */
-let tonalitySelect = document.querySelector('.tonality-select');
-tonalitySelect.value = 0;
+let tonalityInput = document.querySelector('.tonality-input');
+tonalityInput.value = 0;
 
 /** @type {HTMLSelectElement} */
 let accidentalSelect = document.querySelector('.accidental-select');
@@ -97,7 +95,7 @@ gainNode.gain.value = 0.25;
 document.addEventListener('keydown', function (ev) {
 	let code = ev.code;
 	if (code in toneByCode && oscillatorNodeByCode[code] == null) {
-		let tone = toneByCode[code] + +tonalitySelect.value;
+		let tone = toneByCode[code] + +tonalityInput.value;
 		if (ev.shiftKey) {
 			ev.preventDefault();
 			tone += +accidentalSelect.value;
