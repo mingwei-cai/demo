@@ -4,8 +4,8 @@
 }
 
 html {
-	background-color: #FFF;
-	background-image: repeating-conic-gradient(from 0deg, #CCC 0deg 90deg, transparent 90deg 180deg, #CCC 180deg 270deg, transparent 270deg 360deg);
+	background-color: #CCC;
+	background-image: repeating-conic-gradient(#BBB 0deg 90deg, transparent 90deg 180deg);
 	background-size: 40px 40px;
 	background-attachment: fixed;
 }
