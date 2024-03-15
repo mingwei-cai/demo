@@ -4,14 +4,20 @@
 }
 
 html {
-	background-color: #CCC;
-	background-image: repeating-conic-gradient(#BBB 0deg 90deg, transparent 90deg 180deg);
-	background-size: 40px 40px;
-	background-attachment: fixed;
+	background-color: #666;
 }
 
 body {
 	margin: 0;
+}
+
+#input-div>img,
+#output-div>img,
+#test-div {
+	background-color: #CCC;
+	background-image: repeating-conic-gradient(#BBB 0deg 90deg, transparent 90deg 180deg);
+	background-size: 40px 40px;
+	background-attachment: fixed;
 }
 
 .partition-block {

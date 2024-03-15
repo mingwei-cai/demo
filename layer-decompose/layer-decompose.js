@@ -131,8 +131,12 @@ let uploadButton = document.getElementById('upload-button');
 let startButton = document.getElementById('start-button');
 
 let showMask = () => {
+	testDiv.style.cssText = [
+		'width: ' + w + 'px',
+		'height: ' + h + 'px',
+	].join('; ');
 	for (let i = 1; i < n; i += 1) {
-		outputDiv.insertAdjacentHTML('beforeend', '<img src="' + outputUrlArray[i] + '">');
+		outputDiv.insertAdjacentHTML('beforeend', '<img src="' + outputUrlArray[i] + '"> ');
 		testDiv.insertAdjacentHTML('beforeend', '<div style="' + [
 			'position: absolute',
 			'left: 0',
@@ -241,7 +245,7 @@ uploadButton.addEventListener('click', (ev) => {
 	fileInput.addEventListener('change', (ev) => {
 		let url = URL.createObjectURL(fileInput.files[0]);
 		inputUrlArray.push(url);
-		inputDiv.insertAdjacentHTML('beforeend', '<img src="' + url + '">');
+		inputDiv.insertAdjacentHTML('beforeend', '<img src="' + url + '"> ');
 	});
 	fileInput.click();
 });
@@ -271,5 +275,6 @@ startButton.addEventListener('click', (ev) => {
 	msgDiv.innerHTML = '計算中 ' + (0).toFixed(2) + '%';
 	outputDiv.innerHTML = '';
 	testDiv.innerHTML = '';
+	testDiv.style.cssText = '';
 	setTimeout(createMask, 0);
 });
