@@ -57,7 +57,7 @@ makeNode(document.body,
 	)],
 );
 
-/** @type {HTMLSelectElement} */
+/** @type {HTMLInputElement} */
 let tonalityInput = document.querySelector('.tonality-input');
 tonalityInput.value = 0;
 
