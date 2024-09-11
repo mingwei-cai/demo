@@ -38,11 +38,6 @@ let keyboardLayout = [
 	['KeyZ', 'KeyX', 'KeyC', 'KeyV', 'KeyB', 'KeyN', 'KeyM', 'Comma', 'Period', 'Slash'],
 ];
 
-let tonalityArray = [];
-for (let tone = 84; tone >= -84; tone -= 1) {
-	tonalityArray.push((tone > 0 ? '+' : '') + tone);
-};
-
 makeNode(document.body,
 	['<div>',
 		'Tonality: ',
